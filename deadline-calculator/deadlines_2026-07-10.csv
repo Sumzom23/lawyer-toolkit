@@ -1,0 +1,12 @@
+Deadline,Calendar Days,Due Date,Day of Week
+Filing Date,0,"July 10, 2026",Friday
+
+Response due,21,"July 31, 2026",Friday
+Reply due,28,"August 07, 2026",Friday
+30-day deadline,30,"August 10, 2026",Monday
+45-day deadline,45,"August 24, 2026",Monday
+60-day deadline,60,"September 08, 2026",Tuesday
+90-day deadline,90,"October 08, 2026",Thursday
+120-day deadline,120,"November 09, 2026",Monday
+6-month deadline,180,"January 06, 2027",Wednesday
+1-year deadline,365,"July 12, 2027",Monday
