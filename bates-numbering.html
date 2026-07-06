@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bates Numbering — Gavel Legal Toolkit</title>
+<meta name="description" content="Stamp sequential Bates numbers on every page of every PDF in a folder. Numbering continues across files, originals never modified. Free, open source, runs locally.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-left">
+      <span>Free &amp; open source</span>
+      <span>No login · No subscription · Runs on your computer</span>
+    </div>
+    <a href="https://github.com/Sumzom23/lawyer-toolkit" class="tb-phone">View on GitHub →</a>
+  </div>
+</div>
+
+<header>
+  <nav>
+    <a class="logo" href="../index.html"><span class="mark"></span>Gavel</a>
+    <div class="nav-links nav-mobile-hide">
+      <a href="../index.html#how">How it works</a>
+      <a href="../index.html#tools">Tools</a>
+      <a href="../about.html">About</a>
+    </div>
+    <div class="nav-right">
+      <a href="https://github.com/Sumzom23/lawyer-toolkit" class="nav-cta">Get it on GitHub</a>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <svg class="skyline" viewBox="0 0 1440 260" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="0" y="140" width="70" height="120" fill="#47413A"/><rect x="80" y="90" width="46" height="170" fill="#8C8172"/>
+    <rect x="136" y="160" width="60" height="100" fill="#47413A"/><rect x="206" y="60" width="54" height="200" fill="#8C8172"/>
+    <rect x="270" y="120" width="40" height="140" fill="#47413A"/><rect x="320" y="40" width="64" height="220" fill="#8C8172"/>
+    <rect x="394" y="150" width="50" height="110" fill="#47413A"/><rect x="454" y="100" width="34" height="160" fill="#8C8172"/>
+    <rect x="498" y="20" width="70" height="240" fill="#47413A"/><rect x="578" y="130" width="46" height="130" fill="#8C8172"/>
+    <rect x="634" y="80" width="54" height="180" fill="#47413A"/><rect x="698" y="150" width="40" height="110" fill="#8C8172"/>
+    <rect x="748" y="55" width="60" height="205" fill="#47413A"/><rect x="818" y="115" width="44" height="145" fill="#8C8172"/>
+    <rect x="872" y="150" width="60" height="110" fill="#47413A"/><rect x="942" y="70" width="50" height="190" fill="#8C8172"/>
+    <rect x="1002" y="130" width="38" height="130" fill="#47413A"/><rect x="1050" y="30" width="66" height="230" fill="#8C8172"/>
+    <rect x="1126" y="140" width="48" height="120" fill="#47413A"/><rect x="1184" y="95" width="40" height="165" fill="#8C8172"/>
+    <rect x="1234" y="150" width="56" height="110" fill="#47413A"/><rect x="1300" y="65" width="52" height="195" fill="#8C8172"/>
+    <rect x="1362" y="130" width="40" height="130" fill="#47413A"/><rect x="1412" y="160" width="28" height="100" fill="#8C8172"/>
+  </svg>
+  <div class="wrap">
+    <div class="crumb"><a href="../index.html">Home</a> <span>/</span> <a href="../index.html#tools">Tools</a> <span>/ Bates Numbering</span></div>
+    <div class="toolnum">Tool 02 of 07</div>
+    <h1>Bates-stamp an entire folder of PDFs in one run.</h1>
+    <p class="lede">Stamps numbers like SMITH00001 on every page of every PDF, continuing across files. Set the prefix and starting number at the top of the script and run one command. Stamped copies save to a new folder; originals are never modified.</p>
+    <div class="hero-btns">
+      <a class="btn-primary" href="https://raw.githubusercontent.com/Sumzom23/lawyer-toolkit/main/bates-numbering/bates_numbering.py" download>Download the script</a>
+      <a class="btn-ghost-light" href="#" onclick="document.querySelectorAll('.doc h2')[1].scrollIntoView({behavior:'smooth'});return false;">Jump to setup →</a>
+    </div>
+  </div>
+</section>
+
+<section class="content">
+  <div class="wrap">
+    <div class="doc">
+      <h2>What it does</h2>
+      <p>Bates Numbering stamps a sequential number — like <b>SMITH00001, SMITH00002, SMITH00003</b> — on every page of every PDF in a folder. Numbering continues across files, so a 40-page document followed by a 10-page document is numbered 1–40 and then 41–50, exactly the way a production set should read.</p>
+      <p>Your <b>originals are never modified</b>. The script writes stamped copies into a separate output folder, so the source documents stay untouched.</p>
+      <div class="callout"><b>No prompts or menus.</b> You set your options (prefix, starting number, position) at the top of the script, save it, and run it. That is the whole workflow.</div>
+
+      <h2>Setup</h2>
+      <ol class="instructions">
+        <li>
+          <h4>Install Python 3 (once)</h4>
+          <p>Download it free from <b>python.org/downloads</b> and run the installer. On Windows, check the box that says <b>"Add Python to PATH"</b> during installation.</p>
+        </li>
+        <li>
+          <h4>Install the two libraries this tool needs</h4>
+          <p>Open Terminal (Mac) or Command Prompt (Windows) and paste the command for your system:</p>
+          <div class="os-grid">
+  <div><div class="os-label">Mac</div><div class="code has-copy"><button class="copy-btn" onclick="copyCode(this)">Copy</button><code>/usr/local/bin/pip3 install pypdf reportlab</code></div></div>
+  <div><div class="os-label">Windows</div><div class="code has-copy"><button class="copy-btn" onclick="copyCode(this)">Copy</button><code>pip install pypdf reportlab</code></div></div>
+</div>
+        </li>
+        <li>
+          <h4>Download the script</h4>
+          <p>Use the download button in the sidebar. Save <b>bates_numbering.py</b> anywhere convenient — your Desktop works fine.</p>
+        </li>
+      </ol>
+
+      <h2>Running the tool</h2>
+      <ol class="instructions">
+        <li>
+          <h4>Set your options at the top of the script</h4>
+          <p>Open <b>bates_numbering.py</b> in any text editor. The first few lines are settings — edit each one:</p>
+          <div class="code"><span class="cmt"># The six settings at the top of the script:</span><br>
+INPUT_FOLDER&nbsp;&nbsp;<span class="cmt">← folder containing the PDFs to stamp</span><br>
+OUTPUT_FOLDER&nbsp;<span class="cmt">← where the stamped copies go</span><br>
+PREFIX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cmt">← e.g. "SMITH" → SMITH00001</span><br>
+START_NUMBER&nbsp;&nbsp;<span class="cmt">← usually 1, or continue a prior set</span><br>
+DIGITS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cmt">← 5 → 00001; 6 → 000001</span><br>
+POSITION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cmt">← where the stamp sits on the page</span></div>
+          <p>Save the file when you're done.</p>
+        </li>
+        <li>
+          <h4>Run it</h4>
+          <p>In Terminal or Command Prompt, navigate to the folder holding the script (type <b>cd</b>, a space, then drag the folder into the window and press Enter). Then run:</p>
+          <div class="os-grid">
+  <div><div class="os-label">Mac</div><div class="code has-copy"><button class="copy-btn" onclick="copyCode(this)">Copy</button><code>python3 bates_numbering.py</code></div></div>
+  <div><div class="os-label">Windows</div><div class="code has-copy"><button class="copy-btn" onclick="copyCode(this)">Copy</button><code>python bates_numbering.py</code></div></div>
+</div>
+        </li>
+        <li>
+          <h4>Check the output folder</h4>
+          <p>Every PDF now has its Bates number stamped on every page, numbered continuously across the whole set. Your originals are exactly as you left them.</p>
+        </li>
+      </ol>
+
+      <h2>Common errors</h2>
+      <table class="errors">
+        <tr><th>Error</th><th>Fix</th></tr>
+        <tr><td class="err">command not found: python3</td><td>Python isn't installed (or isn't on your PATH). Install it from python.org — on Windows, re-run the installer and check "Add Python to PATH."</td></tr>
+        <tr><td class="err">No module named 'pypdf'</td><td>The libraries didn't install. Re-run the install command from Setup step 2. On a Mac, use the full <b>/usr/local/bin/pip3</b> path shown above.</td></tr>
+        <tr><td class="err">FileNotFoundError</td><td>INPUT_FOLDER points somewhere that doesn't exist. Drag the actual folder into Terminal to get its exact path, and paste that into the script.</td></tr>
+        <tr><td class="err">Stamp overlaps existing text</td><td>Change the POSITION setting — move the stamp to a different corner where the pages have clear margin.</td></tr>
+        <tr><td class="err">Numbering restarted at 1</td><td>You re-ran the script with START_NUMBER = 1. To continue a prior production set, set START_NUMBER to the next number after your last stamped page.</td></tr>
+      </table>
+    </div>
+
+    <aside class="sidebar">
+      <div class="side-card">
+        <h4>Download</h4>
+        <a class="btn-download" href="https://raw.githubusercontent.com/Sumzom23/lawyer-toolkit/main/bates-numbering/bates_numbering.py" download><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1v8.6L4.7 6.3 3.3 7.7 8 12.4l4.7-4.7-1.4-1.4L8 9.6V1H8zM2 13h12v2H2v-2z"/></svg> bates_numbering.py</a>
+      </div>
+      <div class="side-card">
+        <h4>Requirements</h4>
+        <p class="req"><b>Python 3</b> — free, from python.org</p>
+        <p class="req"><b>pypdf</b> + <b>reportlab</b> — one install command</p>
+        <p class="req"><b>A folder of PDFs</b> — originals are never modified</p>
+      </div>
+      <div class="side-card">
+        <h4>All 7 tools</h4>
+        <div class="side-links">
+          <a href="email-export.html">01 · Email Export</a>
+          <a href="bates-numbering.html" class="current">02 · Bates Numbering</a>
+          <a href="deadline-calculator.html">03 · Deadline Calculator</a>
+          <a href="pdf-merger.html">04 · PDF Merger</a>
+          <a href="privilege-log.html">05 · Privilege Log Generator</a>
+          <a href="contract-search.html">06 · Contract Keyword Search</a>
+          <a href="duplicate-finder.html">07 · Duplicate Finder</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="more-tools">
+  <div class="wrap">
+    <h4>More tools in the kit</h4>
+    <div class="mt-grid">
+      <a href="pdf-merger.html">
+        <div class="tnum">04</div>
+        <h3>PDF Merger</h3>
+        <p>Merges every PDF in a folder into one file, with an optional table of contents.</p>
+      </a>
+      <a href="email-export.html">
+        <div class="tnum">01</div>
+        <h3>Email Export</h3>
+        <p>Turns Outlook PST files and Gmail MBOX exports into organized PDFs.</p>
+      </a>
+      <a href="privilege-log.html">
+        <div class="tnum">05</div>
+        <h3>Privilege Log Generator</h3>
+        <p>AI-described privilege log, output as a formatted Excel file.</p>
+      </a>
+    </div>
+  </div>
+  <div style="height:96px;"></div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo"><span class="mark"></span>Gavel</div>
+        <p class="foot-about">A free, open-source toolkit of Python scripts that automate the tedious parts of legal work — so lawyers can spend their time on the practice, not the busywork.</p>
+        <div class="foot-contact">
+          Free &amp; open source<br>
+          github.com/Sumzom23/lawyer-toolkit
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Tools</h4>
+        <a href="email-export.html">Email Export</a>
+        <a href="bates-numbering.html">Bates Numbering</a>
+        <a href="deadline-calculator.html">Deadline Calculator</a>
+        <a href="pdf-merger.html">PDF Merger</a>
+      </div>
+      <div class="foot-col">
+        <h4>More tools</h4>
+        <a href="privilege-log.html">Privilege Log</a>
+        <a href="contract-search.html">Contract Search</a>
+        <a href="duplicate-finder.html">Duplicate Finder</a>
+      </div>
+      <div class="foot-col">
+        <h4>Project</h4>
+        <a href="../index.html#how">How it works</a>
+        <a href="../about.html">About</a>
+        <a href="https://github.com/Sumzom23/lawyer-toolkit">GitHub</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 GAVEL · FREE &amp; OPEN SOURCE</span>
+      <span>MIT LICENSE</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function copyCode(btn) {
+  var c = btn.parentElement.querySelector('code');
+  var t = c ? c.innerText : btn.parentElement.innerText.replace('Copy','').replace('Copied!','').trim();
+  navigator.clipboard.writeText(t).then(() => {
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = 'Copy', 1600);
+  });
+}
+</script>
+
+</body>
+</html>

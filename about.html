@@ -374,6 +374,10 @@
   .page-hero{
     background:var(--ink); color:var(--paper); padding:64px 0 56px; position:relative; overflow:hidden;
   }
+  .page-hero::after{
+    content:''; position:absolute; inset:0; z-index:1;
+    background:linear-gradient(180deg, rgba(26,23,18,0.55) 0%, rgba(26,23,18,0.8) 60%, rgba(26,23,18,0.94) 100%);
+  }
   .page-hero .wrap{position:relative; z-index:2;}
   .crumb{
     font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.05em; color:var(--sage); margin-bottom:18px;
@@ -387,7 +391,7 @@
     font-size:clamp(30px,3.6vw,44px); line-height:1.12; color:var(--white); margin-bottom:16px; max-width:760px;
   }
   .page-hero .lede{
-    font-size:17px; line-height:1.6; color:#8C8172; max-width:620px;
+    font-size:17px; line-height:1.6; color:#B3AA9B; max-width:620px;
   }
   .page-hero .hero-btns{margin-top:28px; display:flex; gap:14px; flex-wrap:wrap;}
 
@@ -537,7 +541,6 @@
     <div class="nav-links nav-mobile-hide">
       <a href="index.html#how">How it works</a>
       <a href="index.html#tools">Tools</a>
-      <a href="tools/deadline-calculator.html">Deadline Calculator</a>
       <a href="about.html" style="color:var(--sage)">About</a>
     </div>
     <div class="nav-right">
@@ -564,8 +567,8 @@
   <div class="wrap">
     <div class="crumb"><a href="index.html">Gavel</a> <span>/</span> About</div>
     <div class="toolnum">About the project</div>
-    <h1>Tools built by a lawyer, shared with every lawyer.</h1>
-    <p class="lede">Gavel is a free, open-source toolkit for the small, repetitive tasks that quietly eat legal hours. No sales pitch — just tools that work.</p>
+    <h1>Small tools for the busywork side of legal practice.</h1>
+    <p class="lede">Gavel is a free, open-source set of scripts for the repetitive tasks that eat legal hours. This page covers what it is, what it isn't, and why it's free.</p>
   </div>
 </section>
 
@@ -573,25 +576,25 @@
   <div class="wrap">
     <div class="doc">
       <h2>Why Gavel exists</h2>
-      <p>Legal work is full of tasks that don't need a lawyer's judgment — they just need doing. Stamping Bates numbers across a stack of PDFs. Counting deadline days around weekends and holidays. Merging exhibits. Drafting the first pass of a privilege log. None of it is hard; all of it is slow, and every hour spent on it is an hour not spent on the actual practice of law.</p>
-      <p>Gavel started as a personal collection of small scripts written to stop doing those tasks by hand. They worked well enough that it seemed worth cleaning up and giving away, so any lawyer — at any size firm — can put that time back where it belongs.</p>
+      <p>Legal work is full of tasks that don't need a lawyer's judgment. Stamping Bates numbers across a stack of PDFs. Counting deadline days around weekends and holidays. Merging exhibits. Drafting the first pass of a privilege log. None of it is hard. All of it is slow.</p>
+      <p>Gavel started as a personal collection of scripts written to stop doing those tasks by hand, inside real case work. They held up well enough to be worth cleaning up and giving away.</p>
 
       <h2>What Gavel is (and isn't)</h2>
       <p><b>It is</b> a set of seven free tools you download and run on your own computer. Your files stay with you. There's no account, no subscription, and no server in the middle. The code is open source, so anyone — including your IT team — can read exactly what each tool does.</p>
-      <p><b>It isn't</b> a product, a platform, or a service. Nobody's upselling you. There's no "pro tier." A couple of the tools use AI to draft descriptions, and those send document text to an AI provider to do that one job — every tool page says plainly when that happens.</p>
+      <p><b>It isn't</b> a product or a service, and there is no paid tier. A few of the tools use AI to draft descriptions; those send document text to an AI provider for that one job, and every tool page says plainly when that happens.</p>
 
       <div class="callout">
         <b>A note on judgment:</b> Gavel handles mechanical work. The tools that draft text (privilege logs, contract summaries) produce a <b>first draft to review</b>, never a finished work product. The deadline calculator is a planning aid, not legal advice. Always check the output against the governing rules and your own judgment.
       </div>
 
       <h2>Open source &amp; free</h2>
-      <p>Every script lives on GitHub under an open license. You're free to read it, run it, suggest fixes, or adapt it to your firm's workflow. If you find a bug or want a tool that isn't here yet, the repository is the place to raise it.</p>
+      <p>Every script is on GitHub under the MIT license. Read it, run it, adapt it to your firm's workflow. Bug reports and requests for new tools go through the repository.</p>
       <p style="margin-top:20px;">
         <a href="https://github.com/Sumzom23/lawyer-toolkit" class="btn-primary" style="background:var(--ink); color:var(--paper); border-color:var(--ink);">View the repository on GitHub →</a>
       </p>
 
       <h2>Get started</h2>
-      <p>Head back to the <a href="index.html#tools" style="color:var(--sage);">tools list</a>, pick the one you need, and follow its step-by-step page. Each one assumes zero technical background and walks you through setup line by line.</p>
+      <p>Go to the <a href="index.html#tools" style="color:var(--sage);">tools list</a>, pick the one you need, and follow its page. Each one assumes no technical background.</p>
     </div>
 
     <aside class="sidebar">
@@ -623,7 +626,7 @@
     <div class="foot-grid">
       <div>
         <div class="logo"><span class="mark"></span>Gavel</div>
-        <p class="foot-about">A free, open-source toolkit of Python scripts that automate the tedious parts of legal work — so lawyers can spend their time on the practice, not the busywork.</p>
+        <p class="foot-about">Free, open-source Python scripts for the tedious parts of legal work: Bates stamping, deadline math, privilege logs, document review chores.</p>
         <div class="foot-contact">Free &amp; open source<br>github.com/Sumzom23/lawyer-toolkit</div>
       </div>
       <div class="foot-col">

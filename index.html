@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gavel — Legal tools for the modern lawyer.</title>
+<title>Gavel — Free tools for legal busywork</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -297,28 +297,6 @@
     display:flex; align-items:center; justify-content:center; font-family:'Fraunces', serif; color:var(--brass); font-size:14px; flex-shrink:0;
   }
 
-  /* ---------- TESTIMONIAL ---------- */
-  .testimonial{padding:104px 0;}
-  .testimonial .wrap{max-width:800px; display:flex; gap:36px; align-items:flex-start;}
-  .avatar-mono{
-    width:64px; height:64px; border-radius:50%; background:var(--ink); color:var(--sage);
-    display:flex; align-items:center; justify-content:center; font-family:'Fraunces', serif; font-size:22px; flex-shrink:0;
-    border:1px solid var(--ink);
-  }
-  .testimonial blockquote{
-    font-family:'Fraunces', serif; font-weight:400; font-size:clamp(21px,2.6vw,28px);
-    line-height:1.5; color:var(--ink);
-  }
-  .testimonial blockquote::before{content:'“'; color:var(--sage);}
-  .testimonial blockquote::after{content:'”'; color:var(--sage);}
-  .testimonial .who{margin-top:22px; display:flex; align-items:center; gap:14px;}
-  .who .line{width:34px; height:1px; background:var(--sage);}
-  .who .meta{font-size:14px; color:var(--slate-soft);}
-  .who .meta b{color:var(--ink); font-weight:500;}
-  @media (max-width:600px){
-    .testimonial .wrap{flex-direction:column;}
-  }
-
   /* ---------- CTA / GET STARTED ---------- */
   .cta-band{
     background:var(--ink); color:var(--paper); padding:96px 0; position:relative; overflow:hidden;
@@ -532,7 +510,6 @@
     <div class="nav-links nav-mobile-hide">
       <a href="#how">How it works</a>
       <a href="#tools">Tools</a>
-      <a href="tools/deadline-calculator.html">Deadline Calculator</a>
       <a href="about.html">About</a>
     </div>
     <div class="nav-right">
@@ -573,8 +550,8 @@
     <div class="wrap">
       <div>
         <div class="eyebrow">Free open-source legal toolkit</div>
-        <h1 class="headline">The busywork, <em>automated</em>.<br>The practice, yours.</h1>
-        <p class="hero-sub">Gavel is a free toolkit of scripts that handle the tedious parts of legal work — Bates numbering, deadline math, privilege logs, and more — right on your own computer. Download, run, done.</p>
+        <h1 class="headline">Free scripts for the <em>repetitive</em> parts of legal work.</h1>
+        <p class="hero-sub">Seven small Python tools for Bates stamping, deadline math, privilege logs, and similar busywork. Everything runs on your own computer, so client documents never touch a server.</p>
         <div class="btn-row">
           <a href="#tools" class="btn-primary">Browse the 7 tools</a>
           <a href="#how" class="btn-ghost-light">See how it works →</a>
@@ -596,7 +573,7 @@
 
 <section class="press">
   <div class="wrap">
-    <div class="label">Built for the everyday tasks lawyers actually do</div>
+    <div class="label">Made for everyday legal work</div>
     <div class="press-row">
       <div class="press-name">Discovery</div>
       <div class="press-name">Document Review</div>
@@ -609,8 +586,7 @@
 
 <section class="problem">
   <div class="wrap">
-    <p class="lede">"Too much of legal work is manual busywork — stamping page numbers, counting deadline days, merging PDFs. Gavel hands that back to the computer, where it belongs."</p>
-    <div class="attribution">— The idea behind Gavel</div>
+    <p class="lede">Stamping page numbers, counting deadline days, merging PDFs. None of it needs a lawyer's judgment, but all of it takes a lawyer's time.</p>
   </div>
 </section>
 
@@ -618,24 +594,24 @@
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow dark">How it works</div>
-      <h2>Three steps from download to done — no technical background needed.</h2>
-      <p>Every tool is a small script you run on your own machine. You install Python once, download the tool you need, and run a single command. Each tool page walks you through it line by line.</p>
+      <h2>Install Python once, download a tool, run one command.</h2>
+      <p>Every tool is a small script you run on your own machine. Each tool page walks through the setup line by line, assuming no technical background.</p>
     </div>
     <div class="steps">
       <div class="step">
         <span class="num">01</span>
         <h3>Install Python (once)</h3>
-        <p>Python is the free engine these tools run on. You install it a single time on your Mac or Windows computer. Each tool page has the exact download link and setup commands.</p>
+        <p>Python is the free program these scripts run on. You install it once, on Mac or Windows. Each tool page has the download link and setup commands.</p>
       </div>
       <div class="step">
         <span class="num">02</span>
         <h3>Download the tool</h3>
-        <p>Pick the tool you need below and click download. You get a single script file plus a plain-English list of the one or two libraries it needs, with copy-paste install commands.</p>
+        <p>Pick a tool below and download the script. Each one needs one or two free libraries, with copy-paste install commands on its page.</p>
       </div>
       <div class="step">
         <span class="num">03</span>
         <h3>Run one command</h3>
-        <p>Open the folder, paste in the run command from the tool page, and press enter. The tool does the work and saves the result — a stamped PDF, an Excel report, a merged file — right where you can find it.</p>
+        <p>Paste the run command from the tool page and press Enter. The output saves to a folder on your computer: a stamped PDF, an Excel report, a merged file.</p>
       </div>
     </div>
   </div>
@@ -645,8 +621,8 @@
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Why lawyers use it</div>
-      <h2>Hours of manual work, handled while you do something else.</h2>
-      <p>Gavel is free and runs entirely on your own computer — nothing is uploaded, nothing is subscribed to, nothing phones home.</p>
+      <h2>Why it works this way.</h2>
+      <p>Gavel is free and runs entirely on your own computer. Nothing gets uploaded, and there is nothing to subscribe to.</p>
     </div>
     <div class="results-grid">
       <div class="result-card">
@@ -659,7 +635,7 @@
       </div>
       <div class="result-card">
         <span class="num">Open</span>
-        <div class="desc">Every script is open source on GitHub. Read it, run it, or hand it to your IT team to review.</div>
+        <div class="desc">Every script is on GitHub. Read it, run it, or hand it to your IT team to review.</div>
       </div>
     </div>
   </div>
@@ -669,7 +645,7 @@
   <div class="wrap">
     <div class="section-head" style="margin-top:104px;">
       <div class="eyebrow dark">The toolkit</div>
-      <h2>Seven tools. One toolkit. Pick what you need today.</h2>
+      <h2>The seven tools.</h2>
     </div>
     <div class="feature-grid">
       <a class="feature" href="tools/email-export.html">
@@ -729,29 +705,18 @@
   </div>
 </section>
 
-<section class="testimonial" id="about">
-  <div class="wrap">
-    <div class="avatar-mono">G</div>
-    <div>
-      <blockquote>Gavel started as a set of scripts one lawyer wrote to stop doing the same tedious tasks by hand. It's shared freely so any firm can put that time back into the actual practice of law.</blockquote>
-      <div class="who">
-        <div class="line"></div>
-        <div class="meta"><b>Why Gavel exists</b> · <a href="about.html" style="color:var(--sage);">Read the full story →</a></div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <section class="cta-band" id="get-started">
   <div class="wrap">
     <div>
       <div class="eyebrow">Get started</div>
       <h2>Free, open source, and ready to download.</h2>
-      <p>No account, no subscription, no demo call. Grab the toolkit from GitHub, pick a tool, and follow the step-by-step page. If you can copy and paste, you can run Gavel.</p>
+      <p>There is nothing to sign up for. Download the toolkit from GitHub, pick a tool, and follow its page. If you can copy and paste, you can run these.</p>
     </div>
     <div class="get-started">
       <h3>Start in three steps</h3>
-      <p class="gs-lede">You don't need to be technical — each tool page spells out every command.</p>
+      <p class="gs-lede">Each tool page spells out every command.</p>
       <div class="gs-step"><span class="gs-n">01</span><span class="gs-t"><b>Open the GitHub repo</b> and download the toolkit (green "Code" button → Download ZIP).</span></div>
       <div class="gs-step"><span class="gs-n">02</span><span class="gs-t"><b>Pick a tool</b> from the seven above and open its page for setup instructions.</span></div>
       <div class="gs-step"><span class="gs-n">03</span><span class="gs-t"><b>Run the command</b> shown in the copy-paste box. That's it.</span></div>
@@ -768,7 +733,7 @@
     <div class="foot-grid">
       <div>
         <div class="logo"><span class="mark"></span>Gavel</div>
-        <p class="foot-about">A free, open-source toolkit of Python scripts that automate the tedious parts of legal work — so lawyers can spend their time on the practice, not the busywork.</p>
+        <p class="foot-about">Free, open-source Python scripts for the tedious parts of legal work: Bates stamping, deadline math, privilege logs, document review chores.</p>
         <div class="foot-contact">
           Free &amp; open source<br>
           github.com/Sumzom23/lawyer-toolkit
